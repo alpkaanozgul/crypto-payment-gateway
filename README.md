@@ -188,6 +188,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any issues or support, please contact:
 
-* **Name**: Your Name
-* **Email**: [your-email@example.com](mailto:your-email@example.com)
-* **GitHub**: [https://github.com/your-username](https://github.com/your-username)
+* **Name**: Alp Kaan Ozgul
+* **Email**: [alpkaanozgul@gmail.com](mailto:alpkaanozgul@gmail.com)
+* **GitHub**: [https://github.com/alpkaanozgul](https://github.com/alpkaanozgul)
