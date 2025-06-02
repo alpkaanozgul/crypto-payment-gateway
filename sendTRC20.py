@@ -57,4 +57,4 @@ def sendTRC20(private_key, to_address, amount):
         return None
 
 if __name__ == "__main__":
-    sendTRC20("e1de43e4c777be59819aadcbb2b134e95c25e878b065f122763d973f8c2ef13f", "TXo2x44LwBgnrZKkXZRv8KgipJ7K3ChVSV", 5)
+    sendTRC20("", "", 5)
