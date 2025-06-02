@@ -38,7 +38,7 @@ def main(api_key, currency, wantAmmount):
             conn = mysql.connector.connect(
                 host="localhost",  
                 user="root",       
-                password="Alp_O_07_Xd",       
+                password="",       
                 database="crypto_db"  
             )
             
@@ -86,7 +86,7 @@ def main(api_key, currency, wantAmmount):
             conn = mysql.connector.connect(
                 host="localhost",  
                 user="root",       
-                password="Alp_O_07_Xd",       
+                password="",       
                 database="crypto_db"  
             )
             
@@ -119,7 +119,7 @@ def main(api_key, currency, wantAmmount):
 
         threading.Thread(target=check_transaction, args=(transaction_id, wA, pK, address, wantAmmount, webhook_url,currency)).start()
 
-        transaction_link = f"https://api.coin-xpress.com/transaction/{transaction_id}/{currency}"
+        transaction_link = f"https://localhost:5000/transaction/{transaction_id}/{currency}"
         return jsonify({"transaction_link": transaction_link})
 
 
@@ -132,7 +132,7 @@ def getCode(api_key):
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Alp_O_07_Xd",
+        password="",
         database="crypto_db"
     )
     cursor = conn.cursor()
@@ -169,7 +169,7 @@ def checkamount(transaction_id):
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Alp_O_07_Xd",
+        password="",
         database="crypto_db"
     )
     cursor = conn.cursor()
@@ -196,7 +196,7 @@ def transaction_page(transaction_id,currency):
         conn = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Alp_O_07_Xd",
+            password="",
             database="crypto_db"
         )
         cursor = conn.cursor()
@@ -241,7 +241,7 @@ def checkstatus(transaction_id):
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Alp_O_07_Xd",
+        password="",
         database="crypto_db"
     )
     cursor = conn.cursor()
@@ -312,7 +312,7 @@ def update_transaction_status(api_key, transaction_id,currency, status):
             conn = mysql.connector.connect(
                 host="localhost",
                 user="root",
-                password="Alp_O_07_Xd",
+                password="",
                 database="crypto_db"
             )
             cursor = conn.cursor()
@@ -342,7 +342,7 @@ def update_transaction_status_internal(transaction_id, status):
         conn = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Alp_O_07_Xd",
+            password="",
             database="crypto_db"
         )
         cursor = conn.cursor()
@@ -378,10 +378,10 @@ def send_webhook(transaction_id, amount, status, webhook_url):
     }
     headers = {
         'Content-Type': 'application/json',
-        'ngrok-skip-browser-warning': 'true' # Add ngrok header
+        'ngrok-skip-browser-warning': 'true' # Add ngrok header if test
     }
     try:
-        response = requests.post(webhook_url, data=json.dumps(payload), headers=headers, verify=False) # Disable SSL verification
+        response = requests.post(webhook_url, data=json.dumps(payload), headers=headers, verify=False) # Disable SSL verification test purpose
         if response.status_code == 200:
             print("Webhook sent successfully!")
         else:
@@ -429,7 +429,7 @@ def validateApi(api_key,currency):
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Alp_O_07_Xd",
+        password="",
         database="crypto_db"
     )
     cursor = conn.cursor()
@@ -450,7 +450,7 @@ def if_transaction_exists(transaction_id):
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Alp_O_07_Xd",
+        password="",
         database="crypto_db"
     )
     cursor = conn.cursor()
