@@ -31,7 +31,7 @@ def main(api_key, wantAmmount):
             conn = mysql.connector.connect(
                 host="localhost",  
                 user="root",       
-                password="Alp_O_07_Xd",       
+                password="",       
                 database="crypto_db"  
             )
             
@@ -83,7 +83,7 @@ def transaction_page(transaction_id):
         conn = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Alp_O_07_Xd",
+            password="",
             database="crypto_db"
         )
         cursor = conn.cursor()
@@ -173,7 +173,7 @@ def update_transaction_status(transaction_id, status):
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Alp_O_07_Xd",
+        password="",
         database="crypto_db"
     )
     cursor = conn.cursor()
@@ -229,7 +229,7 @@ def validateApi(api_key):
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Alp_O_07_Xd",
+        password="",
         database="crypto_db"
     )
     cursor = conn.cursor()
