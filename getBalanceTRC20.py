@@ -10,7 +10,7 @@ def getBalanceTRC20(wallet_address):
     Returns:
         float: The wallet balance in TRX
     """
-    api_key = "01c5782a-93c1-4abc-a69c-ad3f496bb13c"
+    api_key = "get the api key"
     base_url = "https://api.shasta.trongrid.io"
     
     # Set up headers with API key
